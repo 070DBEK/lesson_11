@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Yangiliklar Sayti{% endblock %}
+
+{% block content %}
+
+    {% for post in posts %}
+        <div class="news-item">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.short_content }}</p>
+            <a href="{{ post.get_detail_url }}" class="read-more">Batafsil</a>
+        </div>
+    {% empty %}
+        <h2>Hozircha yangilik yo'q</h2>
+    {% endfor %}
+
+{% endblock %}

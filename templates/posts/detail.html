@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Yangiliklar Sayti{% endblock %}
+
+{% block content %}
+    <article class="news-detail">
+        <h2>Yangilik Sarlavhasi</h2>
+        <p class="news-meta">Sana: {{ posts.created_at }} | Muallif: {{ posts.author }}</p>
+        <!-- <img src="placeholder-image.jpg" alt="Yangilik rasmi" class="news-image"> -->
+        <div class="news-content">
+            <p>Kategoriya: {{ posts.category }}</p>
+            <p>Qisqacha malumot: {{ posts.short_content }}</p>
+            <p>Batafsil: {{ posts.long_content }}</p>
+        </div>
+    </article>
+{% endblock %}
